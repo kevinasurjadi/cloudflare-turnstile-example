@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cloudflare Turnstile Example</title>
+    </head>
+    <body>
+        <center>
+            <a id="example-container"></a>
+        <center>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+        <script>
+            window.onloadTurnstileCallback = function () {
+                turnstile.render('#example-container', {
+                    sitekey: '0x4AAAAAAADycmm8XnJ6mWgb',
+                    callback: function(token) {
+                        console.log(`Challenge Success ${token}`);
+                    },
+                });
+            };
+            // if using synchronous loading, will be called once the DOM is ready
+            turnstile.ready(onloadTurnstileCallback);   
+        </script>
+    </body>
 </html>
