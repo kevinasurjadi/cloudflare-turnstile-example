@@ -17,7 +17,11 @@
                 turnstile.render('#example-container', {
                     sitekey: '0x4AAAAAAADycmm8XnJ6mWgb',
                     callback: function(token) {
-                        console.log(`Challenge Success ${token}`);
+                        const queryString = window.location.search;
+                        const urlParams = new URLSearchParams(queryString);
+                        if (urlParams.has('redirect_to')) {
+                            window.location.replace(urlParams.get('redirect_to'));
+                        }
                     },
                 });
             };
