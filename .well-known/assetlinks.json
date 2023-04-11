@@ -1,0 +1,13 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : {
+            "namespace": "android_app",
+            "package_name": "com.example.external_storage_example",
+            "sha256_cert_fingerprints": [
+                "08:A8:26:7B:16:53:E8:24:27:83:E8:CE:11:53:A1:A6:ED:64:DC:D7:10:CC:BB:25:66:5B:96:2D:24:15:05:70",
+                "AA:3D:5B:BE:13:79:37:C8:6A:7D:91:61:A9:1B:AE:39:2B:EA:01:88:8B:87:63:BE:C8:4F:50:7B:48:8D:70:CB"
+            ]
+        }
+    }
+]
