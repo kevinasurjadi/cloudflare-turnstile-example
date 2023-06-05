@@ -75,8 +75,6 @@
                 if (!sessionToken && sessionToken != "") {
                     switch (captchaProvider) {
                         case "cf-turnstile":
-                        // <div class="h-captcha" data-sitekey="your_site_key"></div>
-                        // <a id="cf-turnstile" class="mb-2"></a>
                             let cfTurnstileDiv = document.createElement('div');
                             cfTurnstileDiv.id = "cf-turnstile";
                             cfTurnstileDiv.className = "mb-2";
