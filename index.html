@@ -72,7 +72,7 @@
                     validate();
                 });
 
-                if (!sessionToken) {
+                if (!sessionToken && sessionToken != "") {
                     switch (captchaProvider) {
                         case "cf-turnstile":
                         // <div class="h-captcha" data-sitekey="your_site_key"></div>
